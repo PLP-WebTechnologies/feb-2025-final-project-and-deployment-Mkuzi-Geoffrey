@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login -  KE E-commerce website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyStore</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="button">Login</button>
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 2025 KE E-commerce website</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent default form submission
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                // In a real application, you would send this data to a backend for authentication
+                console.log('Login attempt:', { email, password });
+                alert('Login functionality would be implemented on the backend.');
+                // After successful login, you might redirect the user
+                // window.location.href = 'dashboard.html';
+            });
+        });
+    </script>
+</body>
+</html>
